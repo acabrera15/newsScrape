@@ -19,8 +19,10 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 const routes = require("./routes/routes");
+const newsRoutes = require('./controllers/newController');
 
-app.use(routes);
+// app.use(routes);
+app.use(newsRoutes);
 
 // Starts the server to begin listening
 // =============================================================
